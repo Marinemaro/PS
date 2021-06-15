@@ -1,7 +1,7 @@
 # Algorithmic Problem-Solving
-***
+
 ## Used Online-Judges
-***
+
 ### BOJ
 [![](https://d2gd6pc034wcta.cloudfront.net/images/logo@2x.png)](https://www.acmicpc.net)
 #### Own profile : https://www.acmicpc.net/user/marinemaro
@@ -13,9 +13,9 @@
 </body>
 
 #### Own profile : -
-***
+
 ## Code Environment
-***
+
 ### Java 11:
 - Compile Options : `javac -release 11 -J-Xms1024m -J-Xmx1920m -J-Xss512m -Dfile.encoding UTF-8 BOJ.test.Main.java`
 - JDK Version : `java version "16.0.1" 2021-04-20`
