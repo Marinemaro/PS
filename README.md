@@ -17,7 +17,7 @@
 ## Code Environment
 
 ### Java 11:
-- Compile Options : `javac -release 11 -J-Xms1024m -J-Xmx1920m -J-Xss512m -Dfile.encoding UTF-8 BOJ.TEST.Main.java`
+- Compile Options : `javac -release 11 -J-Xms1024m -J-Xmx1920m -J-Xss512m -Dfile.encoding UTF-8 Main.java`
 - JDK Version : `java version "16.0.1" 2021-04-20`
 - Project language level : `Java 11 - Local variable syntax for lambda parameters`
 
