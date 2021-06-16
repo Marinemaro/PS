@@ -6,7 +6,7 @@
 ### CodeUp
 <body>
   <a href="https://www.codeup.kr" target="_blank">
-    <img class="CodeUp" width="50%" src="https://i.imgur.com/NeJq2jU.png"/>
+    <img class="CodeUp" width="450" src="https://i.imgur.com/NeJq2jU.png"/>
   </a>
 </body>
 
