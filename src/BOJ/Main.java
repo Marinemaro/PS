@@ -1,14 +1,13 @@
 package BOJ;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 
 public class Main {
-    public static void main(String[] args) {
-        // -
+    public static void main(String[] args) throws IOException{
+        Main.MaroWriter mr = new Main.MaroWriter(256);
+        mr.write("Hello world!");
+        mr.flush();
     }
-
     public static class MaroReader {
         private final InputStream in = System.in;
         private final byte[] b;
