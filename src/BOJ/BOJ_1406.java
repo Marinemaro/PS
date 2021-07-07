@@ -5,8 +5,8 @@ import java.io.*;
 
 public class BOJ_1406 {
     public static void main(String[] args) throws IOException {
-        Main.MaroReader mr = new Main.MaroReader(65536, 100001, true);
-        Main.MaroWriter mw = new Main.MaroWriter(65536);
+        MaroReader mr = new MaroReader(65536, 100001, true);
+        MaroWriter mw = new MaroWriter(65536);
         Deque<Byte> l = new ArrayDeque<>();
         Deque<Byte> r = new ArrayDeque<>();
         for(byte b : mr.nextBytes()) {
