@@ -2,7 +2,7 @@ package BOJ;
 
 import java.io.*;
 
-public class Main {
+public class BOJ_1874 {
     public static void main(String[] args) throws IOException {
         MaroReader mr = new MaroReader(65536, 10, true);
         MaroWriter mw = new MaroWriter(65536);
