@@ -9,13 +9,21 @@ public class Main {
     public static void main(String[] args) throws IOException {
         MaroReader mr = new MaroReader(65536, 10, true);
         MaroWriter mw = new MaroWriter(65536);
-        int money = mr.nextInt();
-        int cnt = 0;
-        int[] coins = {500, 100, 50, 10};
 
-        for(int c : coins) {
-            cnt+=money/c;
-            money%=c;
+        int cnt = 0;
+        int n = mr.nextInt();
+        int k = mr.nextInt();
+
+        while(n>1) {
+            if(n%k==0) {
+                n/=k;
+                cnt++;
+            }
+            else {
+                int m = n%k;
+                n-=m;
+                cnt+=m;
+            }
         }
 
         mw.write(cnt);
