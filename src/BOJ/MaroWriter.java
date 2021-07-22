@@ -8,7 +8,7 @@ public class MaroWriter {
     private final byte[] b;
     private final int sz;
     private int bufferIdx;
-    MaroWriter(int sz) { this.b = new byte[this.sz=sz]; }
+    public MaroWriter(int sz) { this.b = new byte[this.sz=sz]; }
     public void write(byte b) throws IOException {
         if(bufferIdx == sz) flushBuffer(); this.b[bufferIdx++] = b;
     }
