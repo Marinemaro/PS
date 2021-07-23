@@ -10,21 +10,21 @@ public class Main {
         MaroReader mr = new MaroReader(65536, 21, true);
         MaroWriter mw = new MaroWriter(65536);
 
-        byte[] b = mr.nextBytes();
-        int[] arr = new int[mr.getS()];
-        for(int i=0; i<arr.length; i++) arr[i] = b[i]-'0';
-        Arrays.sort(arr);
+        int n = mr.nextInt();
+        int[] fears = new int[n];
+        for(int i=0; i<n; i++) fears[i] = mr.nextInt();
+        Arrays.sort(fears);
 
-        int sum = 0;
-        for(int i=0; i<arr.length; i++) {
-            if(arr[i]<=1 || sum<=1) {
-                while (arr[i] == 0) i++;
-                sum += arr[i];
-            }
-            else sum*=arr[i];
+        int cnt = 0;    // 총 그룹의 개수 (카운트)
+        int members = 1;    // 그룹원의 수 (카운트2)
+        for(int f : fears) {    // 0번 멤버부터 모든 공포도를 체크
+            if(members >= f) {  // 현재 그룹원의 공포도보다 그룹원의 명수가 더 많다면
+                cnt++;          // 그룹 체결 후 그룹원의 수 초기화
+                members = 1;
+            } else members++;   // 아니라면 그룹원의 수 증가
         }
 
-        mw.write(sum);
+        mw.write(cnt);  // 답안 출력
         mw.newLine();
         mw.flush();
     }
