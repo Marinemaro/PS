@@ -3,32 +3,29 @@ package TEST;
 import BOJ.*;
 
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        MaroReader mr = new MaroReader(65536, 10, true);
+        MaroReader mr = new MaroReader(65536, 21, true);
         MaroWriter mw = new MaroWriter(65536);
 
-        int cnt = 0;
-        int n = mr.nextInt();
-        int k = mr.nextInt();
+        byte[] b = mr.nextBytes();
+        int[] arr = new int[mr.getS()];
+        for(int i=0; i<arr.length; i++) arr[i] = b[i]-'0';
+        Arrays.sort(arr);
 
-        while(n>1) {
-            if(n%k==0) {
-                n/=k;
-                cnt++;
+        int sum = 0;
+        for(int i=0; i<arr.length; i++) {
+            if(arr[i]<=1 || sum<=1) {
+                while (arr[i] == 0) i++;
+                sum += arr[i];
             }
-            else {
-                int m = n%k;
-                n-=m;
-                cnt+=m;
-            }
+            else sum*=arr[i];
         }
 
-        mw.write(cnt);
+        mw.write(sum);
         mw.newLine();
         mw.flush();
     }
 }
-
