@@ -9,20 +9,16 @@ public class CT_C4Q3 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String in = br.readLine();
 
-        int c = in.charAt(0)-'a';
-        int r = in.charAt(1)-'0'-1;
-
         int[] dx = {2, 2, 1, 1, -2, -2, -1, -1};
         int[] dy = {1, -1, 2, -2, 1, -1, 2, -2};
 
         int ans = 0;
+        int r = in.charAt(1)-'0'-1;
+        int c = in.charAt(0)-'a';
 
         for(int i=0; i<8; i++)
             if(check(c+dx[i], r+dy[i])) ans++;
-
         System.out.println(ans);
     }
-    public static boolean check(int x, int y) {
-        return x>=0 && x<8 && y>=0 && y<8;
-    }
+    public static boolean check(int x, int y) { return x>=0 && x<8 && y>=0 && y<8; }
 }
