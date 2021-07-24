@@ -12,11 +12,14 @@ public class CT_A08 {
         char[] arr = in.toCharArray();
         Arrays.sort(arr);
         int sum = 0;
+        boolean hasInteger = false;
 
         for(char c : arr)
-            if(c >= '0' && c <= '9') sum+=c-'0';
-            else System.out.print(c);
+            if(c >= '0' && c <= '9') {
+                sum+=c-'0';
+                hasInteger = true;
+            } else System.out.print(c);
 
-        if(sum>0) System.out.println(sum);
+        if(hasInteger) System.out.println(sum);
     }
 }
