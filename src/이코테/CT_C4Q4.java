@@ -1,8 +1,10 @@
-package TEST;
+package 이코테;
 
 import java.io.*;
 
-public class Main {
+// 이것이 코딩 테스트다 챕터 4 - 4번째 문제 : 게임 개발
+
+public class CT_C4Q4 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] in = br.readLine().split(" ");
