@@ -1,11 +1,11 @@
-package TEST;
+package 이코테;
 
 import java.io.*;
 import java.util.StringTokenizer;
 
 // 이것이 코딩 테스트다 챕터 5 - 1번째 문제 : 음료수 얼려 먹기
 
-public class Main {
+public class CT_C5Q1 {
     static int[] dx = {1, 0, -1, 0};
     static int[] dy = {0, 1, 0, -1};
     public static void dfs(int[][] map, int x, int y) {
