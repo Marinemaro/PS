@@ -1,4 +1,4 @@
-package TEST;
+package 이코테;
 
 import java.awt.*;
 import java.io.*;
@@ -6,7 +6,7 @@ import java.util.*;
 
 // 이것이 코딩 테스트다 챕터 5 - 2번째 문제 : 미로 탈출
 
-public class Main {
+public class CT_C5Q2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] in = br.readLine().split(" ");
