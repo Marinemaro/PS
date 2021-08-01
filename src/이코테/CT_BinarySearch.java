@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 // 이것이 코딩 테스트다 챕터 7 : 이진 탐색
 
-public class BSearchExample {
+public class CT_BinarySearch {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] in = br.readLine().split(" ");
@@ -27,8 +27,9 @@ public class BSearchExample {
         int hi = arr.length-1;
         while(lo <= hi) {
             int mid = (lo+hi)/2;
-            if(arr[mid].equals(key)) return mid;
-            else if(arr[mid].compareTo(key)<0) lo = mid+1;
+            int comp = arr[mid].compareTo(key);
+            if(comp == 0) return mid;
+            else if(comp<0) lo = mid+1;
             else hi = mid-1;
         }
         return -1;
