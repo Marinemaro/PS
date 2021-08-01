@@ -1,11 +1,11 @@
-package TEST;
+package 이코테;
 
 import java.io.*;
 import java.util.Arrays;
 
 // 이것이 코딩 테스트다 챕터 6 - 3번째 문제 : 두 배열의 원소 교체
 
-public class Main {
+public class CT_C6Q3 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] in = br.readLine().split(" ");
