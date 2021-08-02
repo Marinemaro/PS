@@ -1,10 +1,10 @@
 package 이코테;
 
-// 이것이 코딩 테스트다 챕터 7 - 2번째 문제 : 떡볶이 떡 만들기
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+
+// 이것이 코딩 테스트다 챕터 7 - 2번째 문제 : 떡볶이 떡 만들기
 
 public class CT_C7Q2 {
     public static void main(String[] args) throws IOException {
