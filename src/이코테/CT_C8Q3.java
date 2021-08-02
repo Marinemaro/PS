@@ -1,8 +1,12 @@
-package TEST;
+package 이코테;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class Main {
+// 이것이 코딩 테스트다 챕터 8 - 3번째 문제 : 바닥 공사
+
+public class CT_C8Q3 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
