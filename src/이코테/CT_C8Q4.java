@@ -19,8 +19,9 @@ public class CT_C8Q4 {
         dp[0] = 0;
         for(int i=0; i<n; i++) {
             int k = Integer.parseInt(br.readLine());
-            for(int j=k; j<=m; j++)
+            for(int j=k; j<=m; j++) {
                 dp[j] = Math.min(dp[j], dp[j-k]+1);
+            }
         }
         System.out.println(dp[m]==INF?"-1":dp[m]);
     }
