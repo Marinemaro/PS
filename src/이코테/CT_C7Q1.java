@@ -1,11 +1,11 @@
-package TEST;
+package 이코테;
 
 import java.io.*;
 import java.util.Arrays;
 
 // 이것이 코딩 테스트다 챕터 7 - 1번째 문제 : 부품 찾기
 
-public class Main {
+public class CT_C7Q1 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
