@@ -1,9 +1,13 @@
-package TEST;
+package 이코테;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class Main {
+// 이것이 코딩 테스트다 챕터 8 - 4번째 문제 : 효율적인 화폐 구성
+
+public class CT_C8Q4 {
     static int INF = 10001;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
