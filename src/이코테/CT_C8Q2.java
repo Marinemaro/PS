@@ -1,10 +1,12 @@
-package TEST;
+package 이코테;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 // 이것이 코딩 테스트다 챕터 8 - 2번째 문제 : 개미 전사
 
-public class Main {
+public class CT_C8Q2 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
