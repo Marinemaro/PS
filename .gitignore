@@ -1,5 +1,5 @@
 src/BOJ/c_out/
-/shelf/
+shelf/
+out/
 /.idea/workspace.xml
-/out/
-/TD2.java
+TD2.java
