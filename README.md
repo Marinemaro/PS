@@ -1,26 +1,33 @@
 # Algorithmic Problem-Solving
 
 
-## Structure of repository
+Structure of repository
+----------
 ```
  PS
- ├── 📁.idea
- ├── 📁src
+ ├── 📁.idea (user-level configuration for IntelliJ IDEA)
+ ├── 📁.vscode (user-level configuration for Visual Studio Code)
+ ├── 📁src (source codes)
      ├──📁BOJ
      ├──📁TEST
      └──📁이코테
- ├── 📄.gitignore
+ ├── 📄.gitignore (gitignore file for vscode)
+ ├── 📄LICENSE
  ├── 📄PS.iml
  └── 📄README.md
 ```
 > The ***src*** directory contains all source codes in this repository.
 >
 > ***Directory Name*** means the source of the problems.
-> - `BOJ` : [Baekjoon Online Judge](https://www.acmicpc.net/)
-> - `TEST` : [Test directory](https://github.com/Marinemaro/PS/tree/master/src/TEST)
-> - `이코테` : [이것이 취업을 위한 코딩 테스트다 with 파이썬](https://github.com/ndb796/python-for-coding-test)
+>> `BOJ` : [Baekjoon Online Judge](https://www.acmicpc.net/)
+>>
+>> `TEST` : [Test directory](src/TEST)
+>>
+>> `이코테` : [이것이 취업을 위한 코딩 테스트다 with 파이썬](https://github.com/ndb796/python-for-coding-test)
 
-## Online-Judges
+
+Online-Judges
+----------
 ### BOJ
 [![](https://d2gd6pc034wcta.cloudfront.net/images/logo@2x.png)](https://www.acmicpc.net)
 #### Own profile : https://www.acmicpc.net/user/marinemaro
@@ -34,7 +41,13 @@
 #### Own profile : -
 
 
-## Coding Environment
+License
+----------
+- [MIT](LICENSE)
+
+
+Coding Environment
+----------
 ### Java 11:
 - IDE : `IntelliJ IDEA 2021.2 (Community Edition)`
 - Compile Options : `javac -release 11 -J-Xms1024m -J-Xmx1920m -J-Xss512m -Dfile.encoding UTF-8 Main.java`
