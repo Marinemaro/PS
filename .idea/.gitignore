@@ -1,6 +1,5 @@
 # Default ignored files
 /shelf/
 /workspace.xml
-/out/production/PS/BOJ/
-/out/production/PS/TEST/
-/src/TEST/TD2.java
+/out/
+TD2.java
