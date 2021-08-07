@@ -19,7 +19,7 @@ import java.io.*;
    이를 점화식으로 나타내면 dp[i][0] = (dp[i-1][0] + dp[i-3][1])*2 로 세울 수 있다.
  */
 
-public class Main {
+public class BOJ_14852 {
     final static int MOD = 1_000_000_007;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in), 32);
