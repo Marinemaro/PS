@@ -5,7 +5,6 @@
     "echoCommand": true,
     "presentation" : { "reveal": "always" },
     "tasks": [
-          //C++17 컴파일
           {
             "label": "save and compile for C++17",
             "command": "g++",
