@@ -1,9 +1,18 @@
-package TEST;
+package BOJ;
 
 import java.io.*;
-import java.util.*;
+import java.util.LinkedHashMap;
 
-public class Main {
+/*
+문제 해결 아이디어
+1. 링크드 해쉬맵에 모든 데이터를 저장
+2. 첫 값이 0이면 무시, 0이 아니라면 sb에 저장
+3. 둘째 값은 0이더라도 sb에 저장
+4. sb에 저장된 수가 0이 아니라면 현재 값만큼 0을 채움
+5. sb에 저장된 문자열이 정답이다.
+ */
+
+public class BOJ_1076 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
