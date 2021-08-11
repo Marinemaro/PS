@@ -2,38 +2,117 @@ package BOJ;
 
 import java.io.*;
 
-/*
-문제 해결 아이디어
-1. 2*1, 1*2, 1*1 크기의 타일로 채우는 경우의 수는 2*1 크기 벽의 경우, 2*1 1개 사용, 1*1 2개 사용으로 2가지 경우가 있으며,
-   2*2 크기 벽의 경우, 2*1 2개 사용, 1*2 2개 사용, 1*2 1개와 1*1 2개 사용을 위/아래로, 2*1 1개와 1*1 2개 사용을 왼/오른쪽으로,
-   1*1 4개 사용으로 7가지 경우가 있으므로, 이를 초깃값인 dp[0]과 dp[1]에 저장한다.
-2. 이제 이를 크게 2*i-1의 경우, 2*i-2의 경우로 나누어서 보고, 2*i-1의 경우, 2*1 1개, 1*1 2개의 경우의 수가 있으며,
-   2*i-2의 경우, 1*2 2개, 1*2 1개와 1*1 2개를 위/아래로 총 3개의 경우의 수가 있다.
-3. 따라서 dp[i] = dp[i-1]*2 + dp[i-2]*3 라는 점화식을 세울 수 있다.
-4. 하지만, 여기서 예외가 존재한다. 2*3의 경우,
-   ㅇㅁㅁ  ㅁㅁㅇ
-   ㅁㅁㅁ, ㅇㅁㅁ
-   과 같은 모양이 가능하기 때문이다. 또한, 이는 2*4, 2*5, 2*n 모두 가능한 모양이다.
-   따라서, DP를 2차원 배열로 만들고,
-   (1칸 전의 예외(위에서 언급한 좌상단 모서리와 우상단 모서리)경우의 수 + 3칸 전의 경우의 수) * 2로 계산하면 된다.
-   이를 점화식으로 나타내면 dp[i][0] = (dp[i-1][0] + dp[i-3][1])*2 로 세울 수 있다.
- */
-
 public class Main {
-    final static int MOD = 1_000_000_007;
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in), 32);
-        int n = Integer.parseInt(br.readLine());
-        long[][] dp = new long[n+1][2];
-        dp[1][1] = 2;
-        if(n>1) {
-            dp[2][1] = 7;
-            dp[2][0] = 1;
+        MaroReader mr = new MaroReader(65536, 256, false);
+        MaroWriter mw = new MaroWriter(65536);
+
+        int n = mr.nextInt();
+        boolean[] a = new boolean[2001];
+        for(int i=0; i<n; i++) a[mr.nextInt()+1000] = true;
+        for(int i=0; i<2001; i++) if(a[i]) mw.write(i-1000+" ");
+        mw.flush();
+    }
+    static class MaroReader {
+        private final InputStream in = System.in;
+        private final byte[] b;
+        private final boolean isNatural;
+        private final int sz;
+        private final int strMax;
+        private int s, idx, rCnt;
+        public MaroReader(int sz, int max, boolean isNatural) {
+            this.b = new byte[this.sz=sz];
+            this.strMax = max;
+            this.isNatural = isNatural;
         }
-        for(int i=3; i<=n; i++) {
-            dp[i][0] = (dp[i-1][0] + dp[i-3][1])%MOD;
-            dp[i][1] = (dp[i][0]*2 + dp[i-1][1]*2 + dp[i-2][1]*3)%MOD;
+        private void refill() throws IOException {
+            rCnt = in.read(b, idx=0, sz);
+            if(rCnt<0) b[0] = -1;
         }
-        System.out.println(dp[n][1]);
+        public byte read() throws IOException {
+            if(idx >= rCnt) refill(); return b[idx++];
+        }
+        public int nextInt() throws IOException {
+            int a;
+            byte b=read();
+            if(isNatural) {
+                a=b-'0';
+                while((b=read())>='0' && b<='9') a=a*10+b-'0';
+                return a;
+            } else {
+                boolean isNeg = b=='-';
+                if(isNeg) b=read();
+                a=b-'0';
+                while((b=read())>='0' && b<='9') a=a*10+b-'0';
+                return isNeg?-a:a;
+            }
+        }
+        public byte[] nextBytes() throws IOException {
+            byte[] str = new byte[strMax];
+            s = 0;
+            byte b = read();
+            if(b == -1) return null;
+            str[s++]=b;
+            while((b=read())>' ' && b<0x7F) str[s++]=b;
+            return str;
+        }
+        public String nextString() throws IOException {
+            StringBuilder sb = new StringBuilder();
+            byte b = read();
+            if(b == -1) return null;
+            do sb.append((char)b);
+            while((b=read())>' ' && b<0x7F);
+            return sb.toString();
+        }
+        public int getS() {
+            return s;
+        }
+    }
+    static class MaroWriter {
+        private final OutputStream out = System.out;
+        private final byte[] b;
+        private final int sz;
+        private int bufferIdx;
+        public MaroWriter(int sz) { this.b = new byte[this.sz=sz]; }
+        public void write(byte b) throws IOException {
+            if(bufferIdx == sz) flushBuffer(); this.b[bufferIdx++] = b;
+        }
+        public void write(int i) throws IOException {
+            byte[] tmp = new byte[11];
+            int idx = 0;
+            boolean isNeg = i<0;
+            if(i==0) tmp[idx++] = '0';
+            else while(i!=0) {
+                int t=i%10;
+                tmp[idx++] = (byte)('0'+(t<0?-t:t));
+                i/=10;
+            }
+            if(isNeg) tmp[idx++] = '-';
+            for(int j=idx-1; j>=0; j--) write(tmp[j]);
+        }
+        public void write(long l) throws IOException {
+            byte[] tmp = new byte[20];
+            int idx = 0;
+            boolean isNeg = l<0;
+            if(l==0) tmp[idx++] = '0';
+            else while(l!=0) {
+                long t=l%10;
+                tmp[idx++] = (byte)('0'+(t<0?-t:t));
+                l/=10;
+            }
+            if(isNeg) tmp[idx++] = '-';
+            for(int j=idx-1; j>=0; j--) write(tmp[j]);
+        }
+        public void write(String s) throws IOException {
+            byte[] str = s.getBytes();
+            write(str, str.length);
+        }
+        public void write(byte[] str, int length) throws IOException{
+            for(int i=0; i<length; i++) write(str[i]);
+        }
+        public void flush() throws IOException { if(bufferIdx > 0) flushBuffer(); out.flush(); }
+        private void flushBuffer() throws IOException { out.write(b, 0, bufferIdx); bufferIdx = 0; }
+        public void newLine() throws IOException{ write((byte)'\n'); }
+        public void space() throws IOException{ write((byte)' '); }
     }
 }
