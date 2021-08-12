@@ -10,8 +10,8 @@ import java.io.IOException;
 
 public class BOJ_10867 {
     public static void main(String[] args) throws IOException {
-        Main.MaroReader mr = new Main.MaroReader(65536, 256, false);
-        Main.MaroWriter mw = new Main.MaroWriter(65536);
+        MaroReader mr = new MaroReader(65536, 256, false);
+        MaroWriter mw = new MaroWriter(65536);
 
         int n = mr.nextInt();
         boolean[] a = new boolean[2001];
