@@ -1,7 +1,10 @@
 package BOJ;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
 
 /*
 문제 해결 아이디어
@@ -9,7 +12,7 @@ import java.util.*;
 2. 쿼리에 따른 결과값 출력
  */
 
-public class Main {
+public class BOJ_1527 {
     public static ArrayList<Long> list = new ArrayList<>();
     public static void f(long l) {
         if(l>=1_000_000_000) return;
@@ -30,7 +33,7 @@ public class Main {
 
         int cnt = 0;
         for(long l : list)
-           if(a <= l && b >= l) cnt++;
+            if(a <= l && b >= l) cnt++;
 
         System.out.println(cnt);
     }
