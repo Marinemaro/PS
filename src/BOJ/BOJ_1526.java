@@ -7,7 +7,7 @@ import java.io.*;
 1. 조건에만 맞게끔 브루트포스식 단순 구현. 추후 수정 예정.
  */
 
-public class Main {
+public class BOJ_1526 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
