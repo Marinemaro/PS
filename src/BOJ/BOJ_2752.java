@@ -1,9 +1,16 @@
 package BOJ;
 
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
 
-public class Main {
+/*
+문제 해결 아이디어
+1. 기본적인 정렬 문제, Arrays.sort() 메소드를 사용해서 정렬한 후 출력한다.
+ */
+
+public class BOJ_2752 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] in = br.readLine().split(" ");
