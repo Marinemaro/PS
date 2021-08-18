@@ -13,7 +13,7 @@ import java.util.*;
 5. 위 과정이 끝나고 Queue가 비게 되면 map의 가장 오른쪽 아래에 저장된 값이 정답이다.
  */
 
-public class Main {
+public class BOJ_2178 {
     static class Coord {
         private final int x;
         private final int y;
