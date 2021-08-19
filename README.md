@@ -1,5 +1,5 @@
-# Algorithmic Problem-Solving
-
+Algorithmic Problem-Solving
+==========
 
 Structure of repository
 ----------
