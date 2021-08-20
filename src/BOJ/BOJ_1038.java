@@ -17,7 +17,7 @@ import java.util.ArrayList;
 6. 만약 n과 list.size()-1이 같다면 list.get(n)이 가능하므로, 이를 출력하면 정답이다.
  */
 
-public class Main {
+public class BOJ_1038 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
