@@ -10,7 +10,7 @@ import java.io.*;
 3. dfs()를 호출한 횟수를 출력하면 정답이다.
  */
 
-public class Main {
+public class BOJ_1012 {
     static final int[] dx = {0, 1, 0, -1};
     static final int[] dy = {1, 0, -1, 0};
     public static void dfs(boolean[][] map, int x, int y) {
