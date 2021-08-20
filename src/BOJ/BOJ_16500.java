@@ -1,6 +1,8 @@
 package BOJ;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /*
 문제 해결 아이디어
@@ -15,7 +17,7 @@ import java.io.*;
 4. 모든 과정이 끝난 후 able[] 배열의 마지막 요소가 true라면 1, false라면 0을 출력하면 정답이다.
  */
 
-public class Main {
+public class BOJ_16500 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String s = br.readLine();
@@ -38,3 +40,4 @@ public class Main {
         System.out.println(able[s.length()]?1:0);
     }
 }
+
