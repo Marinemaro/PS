@@ -1,14 +1,14 @@
 package BOJ;
 
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
 
 /*
 문제 해결 아이디어
 1. boolean형 배열 v[]로 visit 체크, depth가 m에 도달했다면 tmp[] 에 저장된 모든 값을 출력한다.
  */
 
-public class Main {
+public class BOJ_15654 {
     static int m;
     static int[] tmp;
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
