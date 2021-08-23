@@ -13,7 +13,7 @@ import java.util.*;
 4. 위 과정이 끝나고 map[][][]을 완전탐색하여 0이 있다면 -1 출력, 없다면 최대 값-1을 출력하면 정답이다.
  */
 
-public class Main {
+public class BOJ_7569 {
     static int[] dx = {0, 1, 0, -1, 0, 0};
     static int[] dy = {1, 0, -1, 0, 0, 0};
     static int[] dz = {0, 0, 0, 0, 1, -1};
