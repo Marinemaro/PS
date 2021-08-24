@@ -15,7 +15,7 @@ import java.math.BigInteger;
 4. 만약, n이 20보다 크다면 2^n-1 연산을 해야하므로, java.math.BigInteger 클래스를 통해 큰 수 연산을 한 후, 값을 출력한다.
  */
 
-public class Main {
+public class BOJ_1914 {
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
     static void hanoi(int n, int from, int mid, int to) throws IOException {
         if(n>0) {
