@@ -40,7 +40,6 @@ public class BOJ_15657 {
 
         in = br.readLine().split(" ");
         for(int i=0; i<n; i++) a[i] = Integer.parseInt(in[i]);
-        boolean[] v = new boolean[n];
         int[] arr = new int[m];
         Arrays.sort(a);
 
