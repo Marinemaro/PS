@@ -3,7 +3,7 @@ package BOJ;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BOJ_15656 {
     static int n, m;
     static int[] a;
     static BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -35,3 +35,4 @@ public class Main {
         bw.flush();
     }
 }
+
