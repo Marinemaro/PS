@@ -3,7 +3,7 @@ package BOJ;
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class BOJ_9742 {
     public static boolean nextPermutation(char[] c) {
         int idx = -1;   // 초기 인덱스는 -1
         // 1. 마지막부터 탐색하여 가장 처음 만나는 [i] < [i+1]를 찾고, idx 변수에 i 저장
