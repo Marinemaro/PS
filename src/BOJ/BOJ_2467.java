@@ -22,7 +22,7 @@ public class BOJ_2467 {
         int hi = n-1;
         int A = lo;
         int B = hi;
-        int before = Math.abs(A+B);
+        int before = Math.abs(a[A]+a[B]);
         while(lo < hi) {
             int abs = Math.abs(a[lo]+a[hi]);
             if(abs <= before) {
