@@ -15,7 +15,7 @@ import java.util.*;
    조건에 맞는 수만 p[] 에 넣고 출력할 수 있게끔 하면 된다.
  */
 
-public class Main {
+public class BOJ_15663 {
     static int n;
     static int m;
     static int[] a;
