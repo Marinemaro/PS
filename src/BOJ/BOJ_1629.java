@@ -1,8 +1,15 @@
 package BOJ;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
-public class Main {
+/*
+문제 해결 아이디어
+1. 분할정복 제곱 구현 후 c로 나누는 과정만 추가해주면 된다.
+ */
+
+public class BOJ_1629 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String[] in = br.readLine().split(" ");
