@@ -1,7 +1,7 @@
 package BOJ;
 
 import java.io.*;
-import java.util.*;
+import java.util.Arrays;
 
 /*
 문제 해결 아이디어
@@ -15,7 +15,7 @@ import java.util.*;
    이전 요소 tmp[depth-1]와 현재 요소 a[i]를 비교하여 a[i]가 더 크거나 같은 경우에만 tmp[depth]를 갱신하게 한다.
  */
 
-public class Main {
+public class BOJ_15664 {
     static int n;
     static int m;
     static int[] a;
