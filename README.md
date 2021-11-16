@@ -7,11 +7,11 @@ Structure of repository
  PS
  ├── 📁.idea (user-level configuration for IntelliJ IDEA)
  ├── 📁.vscode (user-level configuration for Visual Studio Code)
- ├── 📁src (source codes)
+ ├── 📁src (source code directory)
      ├──📁BOJ
      ├──📁TEST
      └──📁이코테
- ├── 📄.gitignore (gitignore file for vscode)
+ ├── 📄.gitignore
  ├── 📄LICENSE
  ├── 📄PS.iml
  └── 📄README.md
