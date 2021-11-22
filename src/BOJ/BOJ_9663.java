@@ -2,7 +2,7 @@ package BOJ;
 
 import java.io.*;
 
-public class Main {
+public class BOJ_9663 {
     static boolean[] row;
     static boolean[] d1;
     static boolean[] d2;
