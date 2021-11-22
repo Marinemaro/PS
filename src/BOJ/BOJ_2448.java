@@ -9,7 +9,7 @@ public class BOJ_2448 {
     static byte[][] map;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        Main.MaroWriter mw = new Main.MaroWriter(65536);
+        MaroWriter mw = new MaroWriter(65536);
         int n = Integer.parseInt(br.readLine());
         map = new byte[n][n*2-1];
         f(n, 0, n-1);
